@@ -5,7 +5,7 @@ export const tshirt1 = {
     description: "Classic crew neck t-shirt made of 100% cotton",
     sizes: ["XS", "S", "M", "L", "XL"],
     fabric: "100% Cotton",
-    imageUrl: "./media/Tshirt1.png"
+    imageUrl: "./productpics/Tshirt1.png"
   };
   
   export const tshirt2 = {
@@ -15,7 +15,7 @@ export const tshirt1 = {
     description: "Moisture-wicking t-shirt designed for athletic performance",
     sizes: ["S", "M", "L", "XL", "XXL"],
     fabric: "Polyester and Spandex",
-    imageUrl: "./media/Tshirt2.png"
+    imageUrl: "./productpics/Tshirt2.png"
   };
   
   export const tshirt3 = {
@@ -25,7 +25,7 @@ export const tshirt1 = {
     description: "Breathable and lightweight v-neck t-shirt",
     sizes: ["S", "M", "L", "XL"],
     fabric: "60% Cotton, 40% Polyester",
-    imageUrl: "./media/Tshirt3.png"
+    imageUrl: "./productpics/Tshirt3.png"
   };
   
   export const tshirt4 = {
@@ -35,7 +35,7 @@ export const tshirt1 = {
     description: "Slim-fit t-shirt with chest pocket",
     sizes: ["XS", "S", "M", "L"],
     fabric: "100% Cotton",
-    imageUrl: "./media/Tshirt4.png"
+    imageUrl: "./productpics/Tshirt4.png"
   };
   
   export const tshirt5 = {
@@ -45,7 +45,7 @@ export const tshirt1 = {
     description: "Soft and comfortable t-shirt with graphic print",
     sizes: ["S", "M", "L", "XL"],
     fabric: "100% Cotton",
-    imageUrl: "./media/Tshirt5.png"
+    imageUrl: "./productpics/Tshirt5.png"
   };
   
   export const tshirt6 = {
@@ -55,7 +55,7 @@ export const tshirt1 = {
     description: "Long-sleeve henley t-shirt made of soft and breathable fabric",
     sizes: ["M", "L", "XL", "XXL"],
     fabric: "60% Cotton, 40% Polyester",
-    imageUrl: "./media/Tshirt6.png"
+    imageUrl: "./productpics/Tshirt6.png"
   };
   
   export const tshirt7 = {
@@ -65,7 +65,7 @@ export const tshirt1 = {
     description: "Muscle fit compression t-shirt designed to support and enhance performance",
     sizes: ["S", "M", "L", "XL"],
     fabric: "Polyester and Spandex",
-    imageUrl: "./media/Tshirt7.png"
+    imageUrl: "./productpics/Tshirt7.png"
   };
   
   export const products = [

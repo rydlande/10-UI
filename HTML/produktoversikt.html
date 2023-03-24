@@ -4,15 +4,53 @@
     <link rel="stylesheet" href="main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Produktoversikt" />
-    <script src="./produktoversikt.js" type="module" defer></script>
-    <title>Produkter</title>
+    <meta name="description" content="Produktinformasjon" />
+    <script
+      src="https://kit.fontawesome.com/0c38094ff5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rainydays | Produktinfo</title>
   </head>
 
   <body>
-    <main class="product-container"></main>
+    <header>
+      <div class="background-img"></div>
+      <ul class="menu">
+        <li><a class="menuItem" href="./index.html">Home</a></li>
+        <li><a class="menuItem" href="./produktoversikt.html">Products</a></li>
+        <li><a class="menuItem" href="./kontakt.html">Contact</a></li>
+        <li><a class="menuItem" href="./omoss.html">About us</a></li>
+      </ul>
+      <button class="hamburger">
+        <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
+        <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
+      </button>
+
+      <div>
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+
+        <button class="profile">
+          <a href="404.html"><i class="fa-regular fa-user"></i></a>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="overview">
+        <div class="card">
+          <img src="./productpics/Jacket1.png" alt="Picture of ${name}" />
+          <a>Name</a>
+          <a>1000,00 kr</a>
+          <div>
+            <a>newPrice</a>
+            <a>oldPRice</a>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
-  <!--
+</html>
+<!--
   <header class="dropdown">
     <div class="logo-header">
       <a href="./index.html">
@@ -192,4 +230,3 @@
       All Rights Reserved.
     </div>
   </footer>-->
-</html>

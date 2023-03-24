@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./CSS/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Forside" />
+    <meta name="description" content="Front page" />
     <script
       src="https://kit.fontawesome.com/0c38094ff5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js" type="module" defer></script>
+    <script src="./JS/index.js" type="module" defer></script>
     <title>Rainydays | Forside</title>
   </head>
 
-  <body>
+  <body class="index">
     <header>
+      <div class="background-img"></div>
       <ul class="menu">
         <li><a class="menuItem" href="./index.html">Home</a></li>
-        <li><a class="menuItem" href="./produktoversikt.html">Products</a></li>
-        <li><a class="menuItem" href="./kontakt.html">Contact</a></li>
-        <li><a class="menuItem" href="./omoss.html">About us</a></li>
+        <li>
+          <a class="menuItem" href="./HTML/produktoversikt.html">Products</a>
+        </li>
+        <li><a class="menuItem" href="./HTML/kontakt.html">Contact</a></li>
+        <li><a class="menuItem" href="./HTML/omoss.html">About us</a></li>
       </ul>
       <button class="hamburger">
         <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
@@ -30,12 +33,25 @@
         <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
 
         <button class="profile">
-          <a href="404.html"><i class="fa-regular fa-user"></i></a>
+          <a href="./HTML/404.html"><i class="fa-regular fa-user"></i></a>
         </button>
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <div class="clicktoaction">
+        <button>
+          <a href="./HTML/produktoversikt.html">New products</a>
+        </button>
+        <button>
+          <a href="./HTML/produktoversikt.html">Spring sale</a>
+        </button>
+      </div>
+
+      <div>
+        <p>Reduced for you</p>
+      </div>
+    </main>
     <footer></footer>
   </body>
 
