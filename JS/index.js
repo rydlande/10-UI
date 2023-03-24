@@ -1,6 +1,7 @@
-import {products} from "./products.js";
+// import {products} from "./products.js";
+import { array } from "./products.js";
 
-console.log(products);
+console.log(array);
 
 
 const main = document.querySelector("main");
@@ -36,31 +37,60 @@ menuItems.forEach(
 
 
 
-const renderCard = (productId) => {
-  const product = products.find((product) => product.id === productId);
 
-  if (!product) {
-    console.error(`Product with id ${productId} not found.`);
-    return;
+
+const renderCard = (productId) => {
+  //const product = products.find((product) => product.id === productId);
+
+  // if (!product) {
+  //   console.error(`Product with id ${productId} not found.`);
+  //   return;
+  // }
+  for(const jacket of array){
+    console.log(jacket.id);
+    const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = jacket;
+
+    const card = document.createElement("a");
+    card.classList.add("card-frontpage");
+    card.innerHTML = `
+      <div class="reduced">
+        <div class="card-img " href="../HTML/produktinfo.html?id=${jacket.id}">
+          <img src="${jacket.imageURL}" alt="Picture of ${name}" class="card-img-frontpage"/>
+          <h3>${name}</h3>
+          <div class="price-frontpage">
+          <p class="newprice">${jacket.price}</p>
+          <p class="oldprice1">${oldPrice}</p>
+          <a href="../HTML/produktinfo.html?id=${jacket.id}">next</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    main.appendChild(card);
+
+
+
   }
 
-  const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = product;
+  // const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = product;
 
-  const card = document.createElement("a");
-  card.classList.add("card");
-  card.innerHTML = `
-    <div class="reduced">
-      <div class="card-img">
-        <img src="${image}" alt="Picture of ${name}" />
-        <h3>${name}</h3>
-        <p>${newPrice}</p>
-        <p>${oldPrice}</p>
-      </div>
-    </div>
-  `;
-  card.href = `./HTML/produktinfo.html?id=${id}`;
+  // const card = document.createElement("a");
+  // card.classList.add("card-frontpage");
+  // card.innerHTML = `
+  //   <div class="reduced">
+  //     <div class="card-img">
+  //       <img src="${image}" alt="Picture of ${name}" class="card-img-frontpage"/>
+  //       <h3>${name}</h3>
+  //       <div class="price-frontpage">
+  //       <p class="newprice">${newPrice}</p>
+  //       <p class="oldprice1">${oldPrice}</p>
+  //       </div>
+  //     </div>
+  //   </div>
+  // `;
+  // card.href = `./HTML/produktinfo.html?id=${id}`;
 
-  main.appendChild(card);
+  // main.appendChild(card);
 };
 
 

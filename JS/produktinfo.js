@@ -1,9 +1,15 @@
-import {products} from "./products.js";
+import {array} from "./products.js";
+const q = document.location.search;
+const idx = new URLSearchParams(q)
+const productId = idx.get("id")
+console.log(productId);
 
-console.log(products);
+console.log(array);
 
 
-
+for(const arr of array){
+  console.log(arr.name);
+}
 const main = document.querySelector("main");
 
 
@@ -36,22 +42,18 @@ menuItems.forEach(
 )
 
 
-const renderCard = (productId) => {
-    const product = products.find((product) => product.id === productId);
-  
-    if (!product) {
-      console.error(`Product with id ${productId} not found.`);
-      return;
-    }
-  
-    const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = product;
+const renderCard = () => {
+  for(const arr of array){
+    if(arr.id == productId ){
+      console.log("haha");
+      const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = arr;
   
     const card = document.createElement("a");
     card.classList.add("card");
     card.innerHTML = `<div class="card-container">
     <div class="card-img-container-produktinfo">
       <img
-        src="${imageURL}"
+        src="${arr.imageURL}"
         alt="Picture of ${name}"
       />
     </div>
@@ -75,14 +77,63 @@ const renderCard = (productId) => {
     card.href = `../HTML/produktinfo.html?id=${id}`;
   
     main.appendChild(card);
+
+    }
+   
+  ;
+
+    
+    }
   };
-console.log(renderCard);
-  const renderProductDetails = () => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const productId = queryParams.get("id");
-    renderCard(productId);
-  };
+  renderCard(productId)
   
-  renderProductDetails();
+  
+  //   /*if (!product) {
+  //     console.error(`Product with id ${productId} not found.`);
+  //     return;
+  //   }*/
+  
+  //   const { id, name, price, oldPrice, newPrice, description, sizes, fabric, imageURL, image } = arr;
+  
+  //   const card = document.createElement("a");
+  //   card.classList.add("card");
+  //   card.innerHTML = `<div class="card-container">
+  //   <div class="card-img-container-produktinfo">
+  //     <img
+  //       src="${imageURL}"
+  //       alt="Picture of ${name}"
+  //     />
+  //   </div>
+
+  //   <div class="card-container-produktinfo">
+  //     <h3 class="productname">${name}</h3>
+  //     <div class="card-container-price">
+  //       <a class="oldprice">${oldPrice}</a>
+  //       <a class="newprice">${newPrice}</a>
+  //     </div>
+  //   </div>
+  //   <div class="card-container-details">
+  //     <a>${description}</a>
+  //     <details>
+  //       <summary>Meterials</summary>
+  //       <div>${fabric}</div>
+  //     </details>
+  //   </div>
+  // </div>
+  //   `;
+  //   card.href = `../HTML/produktinfo.html?id=${id}`;
+  
+  //   main.appendChild(card);
+  // ;
+
+  // // const renderProductDetails = () => {
+  // //   const queryParams = new URLSearchParams(window.location.search);
+  // //   const productId = queryParams.get("id");
+  // //   renderCard(productId);
+
+  // // };
+
+  
+  // renderProductDetails();
   
   

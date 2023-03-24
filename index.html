@@ -10,12 +10,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="./JS/index.js" type="module" defer></script>
+    <link rel="icon" href="../logo/umbrella.svg" />
     <title>Rainydays | Forside</title>
   </head>
 
   <body class="index">
-    <header>
-      <div class="background-img"></div>
+    <header class="header">
+      <button class="hamburger">
+        <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
+        <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
+      </button>
       <ul class="menu">
         <li><a class="menuItem" href="./index.html">Home</a></li>
         <li>
@@ -24,19 +28,14 @@
         <li><a class="menuItem" href="./HTML/kontakt.html">Contact</a></li>
         <li><a class="menuItem" href="./HTML/omoss.html">About us</a></li>
       </ul>
-      <button class="hamburger">
-        <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
-        <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
+
+      <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+
+      <button class="profile">
+        <a href="./HTML/404.html"><i class="fa-regular fa-user"></i></a>
       </button>
-
-      <div>
-        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
-
-        <button class="profile">
-          <a href="./HTML/404.html"><i class="fa-regular fa-user"></i></a>
-        </button>
-      </div>
     </header>
+    <div class="somespace"></div>
 
     <main>
       <div class="clicktoaction">
@@ -49,13 +48,76 @@
       </div>
 
       <div>
-        <p>Reduced for you</p>
+        <p class="reduced-text">Reduced for you</p>
+      </div>
+      <div class="reduced">
+        <div class="card-img">
+          <img
+            src="./productpics/Jacket1.png"
+            alt="Picture of ${name}"
+            class="card-img-frontpage"
+          />
+          <h3>${name}</h3>
+          <div class="price-frontpage">
+            <p class="newprice">${newPrice}</p>
+            <p class="oldprice1">${oldPrice}</p>
+          </div>
+        </div>
+
+        <div class="card-img">
+          <img
+            src="./productpics/Jacket1.png"
+            alt="Picture of ${name}"
+            class="card-img-frontpage"
+          />
+          <h3>${name}</h3>
+          <div class="price-frontpage">
+            <p class="newprice">${newPrice}</p>
+            <p class="oldprice1">${oldPrice}</p>
+          </div>
+        </div>
+        <div class="card-img">
+          <img
+            src="./productpics/Jacket1.png"
+            alt="Picture of ${name}"
+            class="card-img-frontpage"
+          />
+          <h3>${name}</h3>
+          <div class="price-frontpage">
+            <p class="newprice">${newPrice}</p>
+            <p class="oldprice1">${oldPrice}</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <img
+            src="./media/hike1.jpg"
+            alt="category Women"
+            style="width: 100%"
+          />
+          <a href="./HTML/produktoversikt.html"
+            ><div class="Women">
+              <p>Womens</p>
+            </div></a
+          >
+        </div>
+        <div>
+          <img src="./media/hike1.jpg" alt="category Men" style="width: 100%" />
+          <a href="./HTML/produktoversikt.html"
+            ><div class="Men">
+              <p>Mens</p>
+            </div></a
+          >
+        </div>
       </div>
     </main>
     <footer></footer>
   </body>
+</html>
 
-  <!--
+<!--
   <header class="dropdown">
     <div class="logo-header">
       <a href="./index.html">
@@ -196,4 +258,3 @@
       All Rights Reserved.
     </div>
   </footer> -->
-</html>
