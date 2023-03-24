@@ -4,14 +4,14 @@
     <link rel="stylesheet" href="./CSS/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Front page" />
+    <meta name="description" content="Homepage" />
     <script
       src="https://kit.fontawesome.com/0c38094ff5.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./JS/index.js" type="module" defer></script>
-    <link rel="icon" href="../logo/umbrella.svg" />
-    <title>Rainydays | Forside</title>
+    <script src="./JS/index.js" type="module"></script>
+    <link rel="icon" href="./logo/umbrella.svg" />
+    <title>Home | Rainydays</title>
   </head>
 
   <body class="index">
@@ -23,19 +23,20 @@
       <ul class="menu">
         <li><a class="menuItem" href="./index.html">Home</a></li>
         <li>
-          <a class="menuItem" href="./HTML/produktoversikt.html">Products</a>
+          <a class="menuItem" href="./product-overview.html">Products</a>
         </li>
-        <li><a class="menuItem" href="./HTML/kontakt.html">Contact</a></li>
-        <li><a class="menuItem" href="./HTML/omoss.html">About us</a></li>
+        <li><a class="menuItem" href="./sale.html">Sale</a></li>
+        <li><a class="menuItem" href="./contact.html">Contact</a></li>
       </ul>
 
-      <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      <div class="nav-logo">
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      </div>
 
       <button class="profile">
         <a href="./HTML/404.html"><i class="fa-regular fa-user"></i></a>
       </button>
     </header>
-    <div class="somespace"></div>
 
     <main>
       <div class="clicktoaction">
@@ -47,10 +48,8 @@
         </button>
       </div>
 
-      <div>
-        <p class="reduced-text">Reduced for you</p>
-      </div>
-      <div class="reduced">
+      <p class="popular-text">Populare now</p>
+      <div class="popular">
         <div class="card-img">
           <img
             src="./productpics/Jacket1.png"
@@ -90,26 +89,18 @@
         </div>
       </div>
 
-      <div>
+      <div class="mens-womens">
         <div>
-          <img
-            src="./media/hike1.jpg"
-            alt="category Women"
-            style="width: 100%"
-          />
-          <a href="./HTML/produktoversikt.html"
-            ><div class="Women">
-              <p>Womens</p>
-            </div></a
-          >
+          <img src="./media/hike1.jpg" alt="category Women" />
+          <a href="./HTML/produktoversikt.html" class="category">
+            <p>Womens</p>
+          </a>
         </div>
         <div>
-          <img src="./media/hike1.jpg" alt="category Men" style="width: 100%" />
-          <a href="./HTML/produktoversikt.html"
-            ><div class="Men">
-              <p>Mens</p>
-            </div></a
-          >
+          <img src="./media/hike1.jpg" alt="category Men" />
+          <a href="./HTML/produktoversikt.html" class="category">
+            <p>Mens</p>
+          </a>
         </div>
       </div>
     </main>
@@ -117,7 +108,7 @@
   </body>
 </html>
 
-<!--
+<!-- FORSIDEN
   <header class="dropdown">
     <div class="logo-header">
       <a href="./index.html">

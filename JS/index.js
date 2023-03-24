@@ -1,4 +1,3 @@
-// import {products} from "./products.js";
 import { array } from "./products.js";
 
 console.log(array);
@@ -7,13 +6,11 @@ console.log(array);
 const main = document.querySelector("main");
 
 
-//burgir
 const menu = document.querySelector(".menu");                       
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector(".closeIcon");
 const menuIcon = document.querySelector(".menuIcon");
-
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {

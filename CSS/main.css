@@ -2,11 +2,11 @@
 
 
 *{
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
   }
-header {
+/* header {
     min-height: 10vh;
 }
 main {
@@ -22,7 +22,7 @@ footer {
       'header'
       'body'
       'footer';
-}
+} */
 img {
   max-width: 100%;
   max-height: 100%;
@@ -30,53 +30,48 @@ img {
 }
 
 body.index {
-    font-family: 'Source Sans Pro';
-    background: url(../media/background-home.jpg) no-repeat;
-    background-size: 100%;
-    display: block;
+  font-family: 'Source Sans Pro';
+  background: url(../media/background-home.jpg) no-repeat;
+  background-size: 100%;
+  display: block;
 }
+
 
 
 
 /* NAVBAR */
-
 .header {
   position: fixed;
+  margin-top: 20px;
 }
-
 .profile {
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding-top: 20px;
-    padding-right: 16px;
-    background: none;
-    color: black;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  padding-right: 16px;
+  background: none;
+  color: black;
 }
 .profile i {
   color: black;
 }
-
 .nav-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
-    padding-top: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
 }
-  
 .menuItem {
-    display: block;
-    margin: 30px 63px;
-    padding-right: 760px;
-    font-size: 18px;
-    color: black;
+  display: block;
+  margin: 30px 63px;
+  padding-right: 760px;
+  font-size: 18px;
+  color: black;
 }
-  
 .menuItem:hover {
   text-decoration: none;
 }
-  
 .hamburger {
   position: fixed;
   z-index: 100;
@@ -86,11 +81,9 @@ body.index {
   background: none;
   cursor: pointer;
 }
-  
 .closeIcon {
   display: none;
 }
-  
 .menu {
   position: fixed;
   transform: translateY(-100%);
@@ -103,7 +96,6 @@ body.index {
   list-style: none;
   padding-top: 64px;
 }
-  
 .showMenu {
   transform: translateY(0);
 }
@@ -112,56 +104,62 @@ body.index {
 
 
 /* FORSIDE */
-.reduced {
+.popular-text {
+  position: absolute;
+  margin-left: 20px;
+}
+.popular {
   display: flex;
   flex-direction: row;
   font-size: 12px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  padding-top: 35px;
+  margin-top: 230px;
+  margin-bottom: 30px;
 }
-
 .card-img, a.visitet, a.list {
   text-decoration: none;
   margin-left: 20px;
-  margin-top: 20px;
 }
-
 .card-frontpage {
   width: 120px;
   background-color: #E4E4E4;
   border-radius: 3%;
-  margin: 30px;
   padding: 10px;
 }
-
-.reduced-text {
-  position: absolute;
-  margin-top: 180px;
-  margin-left: 20px;
-}
-
 .card-img-frontpage {
   background-color: #E4E4E4;
   border-radius: 3%;
   max-width: 150px;
-  margin-top: 200px;
   text-decoration: none;
   cursor: pointer;
   font-size: 9px;
   color: black;
   padding: 10px;
 }
-
 .price-frontpage {
   display: flex;
   flex-direction: row;
-  text-decoration: ;
 }
-
 .oldprice1 {
   text-decoration: line-through;
   margin-left: 15px;
+}
+.mens-women {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  width: 100px;
+}
+.category {
+  color: black;
+
+
 }
 
 /* FORSIDE */
