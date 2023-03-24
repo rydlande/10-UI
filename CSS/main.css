@@ -56,11 +56,10 @@ body.index {
 .profile i {
   color: black;
 }
-.nav-logo {
+.nav-logo { /*KOR E DENNA BLITT AV???*/
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
 }
 .menuItem {
   display: block;
@@ -105,8 +104,13 @@ body.index {
 
 /* FORSIDE */
 .popular-text {
-  position: absolute;
+  position: relative;
   margin-left: 20px;
+  font-size: 24px;
+}
+.popular-text-placement {
+  display: flex;
+  flex-direction: column;
 }
 .popular {
   display: flex;
