@@ -15,220 +15,30 @@
   </head>
 
   <body>
-    <header>
-      <div class="background-img"></div>
-      <ul class="menu">
-        <li><a class="menuItem" href="./index.html">Home</a></li>
-        <li><a class="menuItem" href="./produktoversikt.html">Products</a></li>
-        <li><a class="menuItem" href="./kontakt.html">Contact</a></li>
-        <li><a class="menuItem" href="./omoss.html">About us</a></li>
-      </ul>
+    <header class="header">
+      <div class="nav-logo">
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      </div>
       <button class="hamburger">
         <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
         <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
       </button>
+      <ul class="menu">
+        <li><a class="menuItem" href="./index.html">Home</a></li>
+        <li>
+          <a class="menuItem" href="./product-overview.html">Products</a>
+        </li>
+        <li><a class="menuItem" href="./contact.html">Contact</a></li>
+      </ul>
 
-      <div>
-        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
-
-        <button class="profile">
-          <a href="404.html"><i class="fa-regular fa-user"></i></a>
-        </button>
-      </div>
+      <button class="profile">
+        <a href="./404.html"><i class="fa-regular fa-user"></i></a>
+      </button>
     </header>
 
-    <main>
-      <div class="overview">
-        <div class="card">
-          <img src="./productpics/Jacket1.png" alt="Picture of ${name}" />
-          <a>Name</a>
-          <a>1000,00 kr</a>
-          <div>
-            <a>newPrice</a>
-            <a>oldPRice</a>
-          </div>
-        </div>
-      </div>
+    <main class="index">
+      <div class="overview"></div>
+      <!--add button with a pluss sign so you can add it to cart-->
     </main>
   </body>
 </html>
-<!--
-  <header class="dropdown">
-    <div class="logo-header">
-      <a href="./index.html">
-        <img
-          src="./logo/logo-with-mountain.png"
-          alt="logo"
-          class="rainydaysheader"
-      /></a>
-    </div>
-    <div class="NAV-header-bigscreen">
-      <a href="./produktoversikt.html">PRODUKTER</a>
-      <a href="./omoss.html">OM OSS</a>
-      <a href="./kontakt.html">KONKTAKT</a>
-    </div>
-    <div class="icons-header">
-      <div class="handlekurv-header">
-        <a href="./kasse.html">
-          <p class="handlekurv-bigscreen">HANDLEKURV</p>
-        </a>
-        <a href="./kasse.html"> <i class="fa-solid fa-bag-shopping"></i> </a>
-      </div>
-      <div class="dropdown-none">
-        <i class="fa-solid fa-bars"></i>
-        <div class="dropdown-content">
-          <div class="line"></div>
-          <ul>
-            <li><a href="./Forside">Forside</a></li>
-            <li><a href="./produktoversikt.html">Jakker</a></li>
-            <li><a href="./omoss.html">Om oss</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
-            <li><a href="./kasse.html">Handlekurv</a></li>
-          </ul>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <body>
-    <main>
-      <div class="product-container">
-        <div class="card">
-          <div>
-            <a href="./produktinfo.html" class="card-img-container">
-              <img
-                src="./media/jakker/RainyDays_Jacket1.png"
-                alt="jakke1"
-                class="card-img"
-            /></a>
-          </div>
-          <div class="produktnavn-oversikt">
-            <a>AIR Isulated Jacket</a><br />
-            <a><strong>1300kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket2.png"
-              alt="jakke2"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Cascade Shield Jacket</a><br />
-            <a><strong>1900kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket3.png"
-              alt="jakke3"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Odin PRO Hoodie</a><br />
-            <a><strong>2300kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket4.png"
-              alt="jakke4"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Produktnavn</a>
-            <br />
-            <a><strong>PRIS kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket5.png"
-              alt="jakke5"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Produktnavn</a>
-            <br />
-            <a><strong>PRIS kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket6.png"
-              alt="jakke6"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Produktnavn</a>
-            <br />
-            <a><strong>PRIS kr</strong></a>
-          </div>
-        </div>
-        <div class="card">
-          <a href="./produktinfo.html" class="card-img-container">
-            <img
-              src="./media/jakker/RainyDays_Jacket7.png"
-              alt="jakke7"
-              class="card-img"
-          /></a>
-          <div class="produktnavn-oversikt">
-            <a>Produktnavn</a>
-            <br />
-            <a><strong>PRIS kr</strong></a>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
-
-  <footer>
-    <div class="line"></div>
-    <div class="dytt textstyle">
-      <div>
-        <img src="./logo/logo.png" alt="logo" class="rainydaysfooter" />
-      </div>
-
-      <div class="some-footer">
-        <h3 class="kategori-footer">SOSIALE MEDIER</h3>
-        <a class="mindrebilde" href="https://www.instagram.com/freethenipple/">
-          <img src="./logo/instagram.png" alt="instagram" />INSTAGRAM
-        </a>
-
-        <a class="mindrebilde" href="https://www.facebook.com/LaurieGrundt">
-          <img src="./logo/facebook.png" alt="facebook" />FACEBOOK
-        </a>
-
-        <a
-          class="mindrebilde"
-          href="https://www.washingtonpost.com/technology/2022/10/27/twitter-elon-musk/"
-        >
-          <img src="./logo/twitter.png" alt="twitter" /> TWITTER
-        </a>
-      </div>
-      <div class="kundeservice-footer">
-        <h3 class="kategori-footer">RAINYDAYS</h3>
-        <a href="./omoss.html">Om oss</a>
-        <p>Våre kontorer</p>
-        <p>Nyhetsbrev</p>
-      </div>
-      <div class="rainydays-info-footer">
-        <h3 class="kategori-footer">KUNDESERVICE</h3>
-        <a href="./kontakt.html"> Kontakt oss </a>
-        <p>Spørsmål og svar</p>
-        <p>Kjøpsvilkår</p>
-      </div>
-    </div>
-
-    <div class="line"></div>
-    <div class="textstyle">
-      <img class="logo" src="./logo/c.png" alt="copyright" />2022 Rainyday Inc.
-      All Rights Reserved.
-    </div>
-  </footer>-->

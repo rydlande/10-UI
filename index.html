@@ -16,6 +16,9 @@
 
   <body class="index">
     <header class="header">
+      <div class="nav-logo">
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      </div>
       <button class="hamburger">
         <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
         <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
@@ -28,10 +31,6 @@
         <li><a class="menuItem" href="./sale.html">Sale</a></li>
         <li><a class="menuItem" href="./contact.html">Contact</a></li>
       </ul>
-
-      <div class="nav-logo">
-        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
-      </div>
 
       <button class="profile">
         <a href="./HTML/404.html"><i class="fa-regular fa-user"></i></a>
@@ -49,203 +48,92 @@
       </div>
 
       <div class="popular">
-        <p class="popular-text">Populare</p>
+        <p class="popular-text">Reduced for you</p>
+        <!--TRENGER A HREF-->
         <div class="card-img">
           <img
-            src="./productpics/Jacket1.png"
-            alt="Picture of ${name}"
+            src="./productpics/Jacket2.png"
+            alt="Picture of Windproof and Water-Resistant Jacket"
             class="card-img-frontpage"
           />
-          <h3>${name}</h3>
+          <h3 class="overflow">Windproof and Water-Resistant Jacket</h3>
           <div class="price-frontpage">
-            <p class="newprice">${newPrice}</p>
-            <p class="oldprice1">${oldPrice}</p>
+            <p class="newprice">899,00 kr</p>
+            <p class="oldprice1">455,00 kr</p>
           </div>
         </div>
-
+        <!--TRENGER A HREF-->
         <div class="card-img">
           <img
-            src="./productpics/Jacket1.png"
-            alt="Picture of ${name}"
+            src="./productpics/Pants5.png"
+            alt="Picture of Tapered Sweatpants"
             class="card-img-frontpage"
           />
-          <h3>${name}</h3>
+          <h3 class="overflow">Tapered Sweatpants</h3>
           <div class="price-frontpage">
-            <p class="newprice">${newPrice}</p>
-            <p class="oldprice1">${oldPrice}</p>
-          </div>
-        </div>
-        <div class="card-img">
-          <img
-            src="./productpics/Jacket1.png"
-            alt="Picture of ${name}"
-            class="card-img-frontpage"
-          />
-          <h3>${name}</h3>
-          <div class="price-frontpage">
-            <p class="newprice">${newPrice}</p>
-            <p class="oldprice1">${oldPrice}</p>
+            <p class="newprice">599,00 kr</p>
+            <p class="oldprice1">459,00 kr</p>
           </div>
         </div>
       </div>
-
-      <div class="mens-womens">
-        <div>
-          <img src="./media/hike1.jpg" alt="category Women" />
+      <div>
+        <div class="container-category">
+          <img src="./media/hike-women.jpg" alt="category Women" />
           <a href="./HTML/produktoversikt.html" class="category">
             <p>Womens</p>
           </a>
         </div>
-        <div>
-          <img src="./media/hike1.jpg" alt="category Men" />
+        <div class="container-category">
+          <img src="./media/hike-men.jpg" alt="category Men" />
           <a href="./HTML/produktoversikt.html" class="category">
             <p>Mens</p>
           </a>
         </div>
       </div>
     </main>
-    <footer></footer>
+
+    <footer>
+      <div>
+        <!-- <img src="./media/footer.png" alt="footer-background" /> -->
+        <div class="footer-container">
+          <div class="some-footer">
+            <a
+              class="mindrebilde"
+              href="https://www.instagram.com/freethenipple/"
+            >
+              <img src="./logo/instagram.png" alt="instagram" />INSTAGRAM
+            </a>
+
+            <a class="mindrebilde" href="https://www.facebook.com/LaurieGrundt">
+              <img src="./logo/facebook.png" alt="facebook" />FACEBOOK
+            </a>
+
+            <a
+              class="mindrebilde"
+              href="https://www.washingtonpost.com/technology/2022/10/27/twitter-elon-musk/"
+            >
+              <img src="./logo/twitter.png" alt="twitter" /> TWITTER
+            </a>
+          </div>
+          <div class="kundeservice-footer">
+            <h3 class="kategori-footer">RAINYDAYS</h3>
+            <a href="./omoss.html">Om oss</a>
+            <p>Våre kontorer</p>
+            <p>Nyhetsbrev</p>
+          </div>
+          <div class="rainydays-info-footer">
+            <h3 class="kategori-footer">KUNDESERVICE</h3>
+            <a href="./kontakt.html"> Kontakt oss </a>
+            <p>Spørsmål og svar</p>
+            <p>Kjøpsvilkår</p>
+          </div>
+          <div class="textstyle">
+            <img class="logo" src="./logo/c.png" alt="copyright" />2022 Rainyday
+            Inc. All Rights Reserved.
+          </div>
+          <img src="./media/footer.png" alt="footer-background" />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-
-<!-- FORSIDEN
-  <header class="dropdown">
-    <div class="logo-header">
-      <a href="./index.html">
-        <img
-          src="./logo/logo-with-mountain.png"
-          alt="logo"
-          class="rainydaysheader"
-      /></a>
-    </div>
-    <div class="NAV-header-bigscreen">
-      <a href="./produktoversikt.html">PRODUKTER</a>
-      <a href="./omoss.html">OM OSS</a>
-      <a href="./kontakt.html">KONKTAKT</a>
-    </div>
-    <div class="icons-header">
-      <div class="handlekurv-header">
-        <a href="./kasse.html">
-          <p class="handlekurv-bigscreen">HANDLEKURV</p>
-        </a>
-        <a href="./kasse.html"> <i class="fa-solid fa-bag-shopping"></i> </a>
-      </div>
-      <div class="dropdown-none">
-        <i class="fa-solid fa-bars"></i>
-        <div class="dropdown-content">
-          <div class="line"></div>
-          <ul>
-            <li><a href="./Forside">Forside</a></li>
-            <li><a href="./produktoversikt.html">Jakker</a></li>
-            <li><a href="./omoss.html">Om oss</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
-            <li><a href="./kasse.html">Handlekurv</a></li>
-          </ul>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <body>
-    <div>
-      <div>
-        <img
-          src="./media/bilder/backround-forside.png"
-          alt="forsidebilde"
-          style="width: 100%"
-        />
-      </div>
-        <div class="forside-slogan">
-          <img
-            src="./logo/x pushing the comfort zone x.png"
-            alt="slogan-pushing-the-comfort-zone"
-            style="width: 100%"
-          />
-        </div>
-        <div class="forside-kategori forside-kategori-sesong">
-            <div class="forside-bilde">
-              <img
-                src="./media/bilder/sesongens-nyheter.png"
-                alt="sesongens nyheter - bilde"
-              />
-            </div>
-            <div class="sesongens-nyheter">
-              <p><strong>SESONGENS NYHETER</strong></p>
-            </div>
-            <a href="./produktoversikt.html">
-              <div class="clickme-forside-sesong">
-                <p><strong>se mer ></strong></p>
-              </div>
-            </a>
-          </div>
-          <div class="forside-big">
-          <div class="forside-bilde">
-            <img
-              src="./media/bilder/forside-dame.png"
-              alt="dame - bilde"
-              class="forside-dame"
-            />
-            <a href="./produktoversikt.html">
-              <div class="clickme-forside">
-                <p><strong>DAME</strong></p>
-              </div>
-            </a>
-          </div>
-        <div class="forside-bilde">
-          <img src="./media/bilder/forside-herre.png" alt="herre - bilde" />
-          <a href="./produktoversikt.html">
-            <div class="clickme-forside">
-              <p><strong>HERRE</strong></p>
-            </div>
-          </a>
-        </div>
-      </div>
-      </div>
-    </div>
-  </body>
-
-  <footer>
-    <div class="line"></div>
-    <div class="dytt textstyle">
-      <div>
-        <img src="./logo/logo.png" alt="logo" class="rainydaysfooter" />
-      </div>
-
-      <div class="some-footer">
-        <h3 class="kategori-footer">SOSIALE MEDIER</h3>
-        <a class="mindrebilde" href="https://www.instagram.com/freethenipple/">
-          <img src="./logo/instagram.png" alt="instagram" />INSTAGRAM
-        </a>
-
-        <a class="mindrebilde" href="https://www.facebook.com/LaurieGrundt">
-          <img src="./logo/facebook.png" alt="facebook" />FACEBOOK
-        </a>
-
-        <a
-          class="mindrebilde"
-          href="https://www.washingtonpost.com/technology/2022/10/27/twitter-elon-musk/"
-        >
-          <img src="./logo/twitter.png" alt="twitter" /> TWITTER
-        </a>
-      </div>
-      <div class="kundeservice-footer">
-        <h3 class="kategori-footer">RAINYDAYS</h3>
-        <a href="./omoss.html">Om oss</a>
-        <p>Våre kontorer</p>
-        <p>Nyhetsbrev</p>
-      </div>
-      <div class="rainydays-info-footer">
-        <h3 class="kategori-footer">KUNDESERVICE</h3>
-        <a href="./kontakt.html"> Kontakt oss </a>
-        <p>Spørsmål og svar</p>
-        <p>Kjøpsvilkår</p>
-      </div>
-    </div>
-
-    <div class="line"></div>
-    <div class="textstyle">
-      <img class="logo" src="./logo/c.png" alt="copyright" />2022 Rainyday Inc.
-      All Rights Reserved.
-    </div>
-  </footer> -->

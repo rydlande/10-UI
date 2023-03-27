@@ -30,7 +30,7 @@ main {
 
 
 
-/* HEADER 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -84,7 +84,7 @@ a {
 .dropdown:hover .dropdown-content {
   display: block;
 }
- HEADER */
+/*  HEADER */
 
 
 
@@ -93,7 +93,7 @@ a {
 
 
 
-/* FORSIDE
+/* FORSIDE */
 .forsidebilde {
   align-items: center;
   width: 100%;
@@ -165,7 +165,7 @@ a {
   display: grid;
   place-items: center;
 }
-FORSIDE */
+*/ FORSIDE */
 
 
 
