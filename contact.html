@@ -9,10 +9,70 @@
       src="https://kit.fontawesome.com/0c38094ff5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./JS/contact.js" type="module"></script>
     <link rel="icon" href="./logo/umbrella.svg" />
     <title>Contact | Rainydays</title>
   </head>
 
+  <body>
+    <header class="header">
+      <div class="nav-logo">
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      </div>
+      <button class="hamburger">
+        <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
+        <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
+      </button>
+      <ul class="menu">
+        <li><a class="menuItem" href="./index.html">Home</a></li>
+        <li><a class="menuItem" href="./product-overview.html">Products</a></li>
+        <li><a class="menuItem" href="./contact.html">Contact</a></li>
+      </ul>
+
+      <button class="profile">
+        <a href=""><i class="fa-regular fa-user"></i></a>
+      </button></header>
+    <main class="contact">
+      <div>
+        <p>Contact us!</p>
+      </div>
+      <form>
+        <div id="container">
+
+          <div>
+            <label for="name">Name :</label>
+            <span id="nameMessage"></span></br>
+            <input id="name" type="text" name="name"/></br>
+          </div>
+
+          <div>
+            <label for="subject">Subject :</label>
+            <span id="subjectMessage"></span></br>
+            <input id="subject" type="subject"/>
+          </div>
+
+          <div>
+            <label for="email">Email :</label>
+            <span id="emailMessage"></span></br>
+            <input id="email" type="text"/>
+          </div>
+
+          <div>
+            <label for="adress">What do you wanna talk to us about ? :</label>
+            <span id="adressMessage"></span></br>
+            <input id="adress" type="text" class="adress"/>
+          </div>
+
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+
+
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
   </html>
 
 

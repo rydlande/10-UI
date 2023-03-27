@@ -153,6 +153,12 @@ h3.overflow {
   text-align: center;
   margin-top: 20px;
 }
+.oldprice {
+  text-decoration: line-through;
+}
+.newprice {
+  color: red;
+}
 .category {
   color: black;
   position: absolute;
@@ -167,7 +173,7 @@ h3.overflow {
 .container-category img {
   opacity: 0.5;
 } 
-.container-category img:hover {  /* sluttet å fungere? */
+.container-category img:hover {
   opacity: 1;
 }
 /* FORSIDE */
@@ -223,47 +229,71 @@ main.index {
 
 /* DETAILS */
 .card-container {
-  display: grid;
-  grid-template-rows: auto;
-  margin-top: 30px;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #E4E4E4;
+  border-radius: 3%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
 }
 .card-img-container-produktinfo {
-  max-width: 700px;
-  background-color: #E4E4E4;
   padding: 30px;
-  border-radius: 3%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .card-container-produktinfo {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
 }
-.card-container-price {
-  display: flex;
-  flex-direction: column;
-  margin-left: 40%;
-}
-.productname {
-  display: flex;
-  text-decoration: none;
-}
-.oldprice {
-  text-decoration: line-through;
-}
-.newprice {
-  color: #db3000;
-}
 .card-container-details {
   display: flex;
   flex-direction: column;
-  align-items: left;
-
+  padding-top: 10px;
+}
+.cart {
+  padding: 8px;
+  font-weight: 18px;
+  border: 2px solid #053641;
+  cursor: pointer;
+}
+.cart:hover {
+  background-color: #053641;
+  color: white;
 }
 /* DETAILS */
+
+
+
+/* CONTACT */
+main.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+ul {
+  list-style: none;
+}
+input {
+  padding: 12px 60px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  border: 2px solid #053641;
+}
+.adress {
+  padding: 90px 60px;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* CONTACT */
 
 
 
@@ -285,6 +315,7 @@ main.index {
     text-align: center;
     padding-top: 90px;
 }
+
 
 
 
