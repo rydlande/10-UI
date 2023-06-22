@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Homepage" />
+    <script
+      src="https://kit.fontawesome.com/0c38094ff5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js" type="module"></script>
+    <link rel="icon" href="./logo/umbrella.svg" />
+    <title>Home | Rainydays</title>
+  </head>
+
+  <body class="index">
+    <header class="header">
+      <div class="nav-logo">
+        <img src="./logo/nav-logo.png" alt="logo" class="nav-logo" />
+      </div>
+      <button class="hamburger">
+        <i class="menuIcon"><i class="fa-solid fa-bars"></i></i>
+        <i class="closeIcon"><i class="fa-solid fa-x"></i></i>
+      </button>
+      <ul class="menu">
+        <li><a class="menuItem" href="./index.html">Home</a></li>
+        <li><a class="menuItem" href="./product-overview.html">Products</a></li>
+        <li><a class="menuItem" href="./contact.html">Contact</a></li>
+      </ul>
+
+      <button class="profile">
+        <a href=""><i class="fa-regular fa-user"></i></a>
+      </button>
+    </header>
+
+    <main>
+      <div class="clicktoaction">
+        <button>
+          <a href="./HTML/produktoversikt.html">New products</a>
+        </button>
+        <button>
+          <a href="./HTML/produktoversikt.html">Spring sale</a>
+        </button>
+      </div>
+
+      <div class="popular">
+        <p class="popular-text">Reduced for you</p>
+        <!--TRENGER A HREF-->
+        <div class="card-img">
+          <img
+            src="./productpics/Jacket2.png"
+            alt="Picture of Windproof and Water-Resistant Jacket"
+            class="card-img-frontpage"
+          />
+          <h3 class="overflow">Windproof and Water-Resistant Jacket</h3>
+          <div class="price-frontpage">
+            <p class="newprice">899,00 kr</p>
+            <p class="oldprice1">455,00 kr</p>
+          </div>
+        </div>
+        <!--TRENGER A HREF-->
+        <div class="card-img">
+          <img
+            src="./productpics/Pants5.png"
+            alt="Picture of Tapered Sweatpants"
+            class="card-img-frontpage"
+          />
+          <h3 class="overflow">Tapered Sweatpants</h3>
+          <div class="price-frontpage">
+            <p class="newprice">599,00 kr</p>
+            <p class="oldprice1">459,00 kr</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="container-category">
+          <img src="./media/hike-women.jpg" alt="category Women" />
+          <a href="./HTML/produktoversikt.html" class="category">
+            <p>Womens</p>
+          </a>
+        </div>
+        <div class="container-category">
+          <img src="./media/hike-men.jpg" alt="category Men" />
+          <a href="./HTML/produktoversikt.html" class="category">
+            <p>Mens</p>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footer-container">
+          <div class="some-footer">
+            <a
+              class="mindrebilde"
+              href="https://www.instagram.com/freethenipple/"
+            >
+              <img src="./logo/instagram.png" alt="instagram" />INSTAGRAM
+            </a>
+
+            <a class="mindrebilde" href="https://www.facebook.com/LaurieGrundt">
+              <img src="./logo/facebook.png" alt="facebook" />FACEBOOK
+            </a>
+
+            <a
+              class="mindrebilde"
+              href="https://www.washingtonpost.com/technology/2022/10/27/twitter-elon-musk/"
+            >
+              <img src="./logo/twitter.png" alt="twitter" /> TWITTER
+            </a>
+          </div>
+          <div class="kundeservice-footer">
+            <h3 class="kategori-footer">RAINYDAYS</h3>
+            <a href="./omoss.html">Om oss</a>
+            <p>Våre kontorer</p>
+            <p>Nyhetsbrev</p>
+          </div>
+          <div class="rainydays-info-footer">
+            <h3 class="kategori-footer">KUNDESERVICE</h3>
+            <a href="./kontakt.html"> Kontakt oss </a>
+            <p>Spørsmål og svar</p>
+            <p>Kjøpsvilkår</p>
+          </div>
+          <div class="textstyle">
+            <img class="logo" src="./logo/c.png" alt="copyright" />2022 Rainyday
+            Inc. All Rights Reserved.
+          </div>
+          <img src="./media/footer.png" alt="footer-background" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

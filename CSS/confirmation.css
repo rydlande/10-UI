@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Madurai';
+    src: url(../media/Hind_Madurai/HindMadurai-Regular.ttf);
+}
+@font-face {
+    font-family: 'Madurai-Light';
+    src: url(../media/Hind_Madurai/HindMadurai-Light.ttf);
+}
+@font-face {
+    font-family: 'Madurai-Medium';
+    src: url(../media/Hind_Madurai/HindMadurai-Medium.ttf);
+}
+@font-face {
+    font-family: 'Madurai-SemiBold';
+    src: url(../media/Hind_Madurai/HindMadurai-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Madurai-Bold';
+    src: url(../media/Hind_Madurai/HindMadurai-Bold.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.5px solid red; */
+}
+:root {
+    --main-color: #ff9103;
+    --main-color-light: #ffa561;
+    --main-color-dark: #de780c;
+    --grey: #a8a8a8;
+    --black: #000;
+    --white: #fff;
+}
+body {
+    font-family: 'Madurai';
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+body > header {
+    grid-area: header;
+    z-index: 2;
+}
+body > main {
+    grid-area: main;
+}
+body > footer {
+    grid-area: footer;
+}
+header {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    align-items: center;
+    padding: 23px 18px 23px 18px;
+    background: linear-gradient(white, white, white, transparent);
+}
+.logoHeader {
+    margin: 16px;
+    width: 140px;
+    height: auto;
+}
+
+
+.thankYou {
+    text-align: center;
+    font-family: 'Madurai-SemiBold';
+    font-size: 28px;
+    margin-top: 40px;
+}
+.confirmation {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0 40px 0;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productImage {
+    width: 300px;
+}
+.productInfo {
+    display: flex;
+    margin: 10px;
+}
+.productName {
+    font-size: 15px;
+    font-family: 'Madurai-SemiBold';
+    margin: 0 4px 0 0;
+    text-transform: uppercase;
+}
+.carrier {
+    font-size: 15px;
+    font-family: 'Madurai-Light';
+    font-weight: lighter;
+}
+@media (max-width: 399px) {
+    .productImage {
+        width: 150px;
+    }
+}
+.backDiv {
+    text-align: center;
+    margin-top: 40px;
+}
+.back {
+    text-decoration: none;
+    background-color: var(--main-color-light);
+    color: var(--black);
+    padding: 8px 12px;
+}
+.back:hover {
+    background-color: var(--main-color-dark);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-color-light);
+    height: 30px;
+    font-size: 14px;
+}
+.snugFooter {
+    margin: 0 30px 0 7px;
+}
+.contactFooter {
+    text-decoration: none;
+    color: var(--black);
+}
+.contactFooter:hover {
+    text-decoration: underline;
+}

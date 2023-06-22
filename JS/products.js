@@ -1,103 +1,114 @@
-export const array = [ 
-  {
-    'id': 1,
-    'name': "Water-Resistant Lightweight Jacket",
-    'price': "749,95 kr",
-    'description': "Water-resistant lightweight jacket with breathable mesh lining",
-    'sizes': ["S", "M", "L", "XL"],
-    'fabric': "100% Polyester",
-    'imageURL': "../productpics/Jacket1.png",
-  },
-//  {
-//     'id': 2,
-//     'name': "Windproof and Water-Resistant Jacket",
-//     'oldPrice': "899,00 kr",
-//     'newPrice': "455,00 kr",
-//     'description': "Windproof and water-resistant jacket with detachable hood",
-//     'sizes': ["XS", "S", "M", "L"],
-//     'fabric': "Polyester and Spandex",
-//     'imageURL': "../productpics/Jacket2.png"
-//   },
-{
-    'id': 4,
-    'name': "Lightweight and Packable Jacket",
-    'price': "600,00 kr",
-    'description': "Lightweight and packable jacket with adjustable hood and hem",
-    'sizes': ["S", "M", "L"],
-    'fabric': "100% Nylon",
-    'imageURL': "../productpics/Jacket4.png"
-  },
-{
-    'id': 5,
-    'name': "Warm and Insulated Jacket",
-    'price': "1129,50 kr",
-    'description': "Warm and insulated jacket with zippered hand pockets",
-    'sizes': ["XS", "S", "M", "L", "XL"],
-    'fabric': "100% Polyester",
-    'imageURL': "../productpics/Jacket5.png"
-  },
-{
-    'id': 6,
-    'name': "Waterproof and Breathable Jacket",
-    'price': "1300,00 kr",
-    'description': "Waterproof and breathable jacket with underarm vents and adjustable cuffs",
-    'sizes': ["S", "M", "L", "XL", "XXL"],
-    'fabric': "100% Nylon",
-    'imageURL': "../productpics/Jacket6.png"
-  },
-{
-    'id': 7,
-    'name': "Insulated and Windproof Jacket",
-    'price': "849,00 kr",
-    'description': "Insulated and windproof jacket with adjustable hem and cuffs",
-    'sizes': ["M", "L", "XL", "XXL"],
-    'fabric': "100% Polyester",
-    'imageURL': "../productpics/Jacket7.png"
-  },
-// {
-//     'id': 8,
-//     'name': "Stretch Chino Pants",
-//     'price': "450,00 kr",
-//     'description': "Stretch chino pants with a slim fit",
-//     'sizes': ["30x30", "32x30", "34x30", "36x30"],
-//     'fabric': "98% Cotton, 2% Elastane",
-//     'imageURL': "../productpics/Pants1.png"
-//   },
-{
-    'id': 9,
-    'name': "Cropped Wide-Leg Pants",
-    'price': "690,00 kr",
-    'description': "Cropped wide-leg pants with a high waist",
-    'sizes': ["XS", "S", "M", "L"],
-    'fabric': "100% Cotton",
-    'imageURL': "../productpics/Pants2.png"
-  },
-{
-    'id': 10,
-    'name': "Cargo Pants",
-    'price': "349,00 kr",
-    'description': "Cargo pants with multiple pockets and adjustable cuffs",
-    'sizes': ["28x30", "30x30", "32x30", "34x30", "36x30"],
-    'fabric': "100% Cotton",
-    'imageURL': "../productpics/Pants3.png"
-  },
-{
-    'id': 11,
-    'name': "Skinny Jeans",
-    'price': "799,90 kr",
-    'description': "Skinny jeans with a high rise and ankle length",
-    'sizes': ["24", "25", "26", "27", "28", "29"],
-    'fabric': "98% Cotton, 2% Elastane",
-    'imageURL': "../productpics/Pants4.png"
-  },
-// {
-//     'id': 12,
-//     'name': "Tapered Sweatpants",
-//     'oldPrice': "599,00 kr",
-//     'newPrice': "459,00 kr",
-//     'description': "Tapered sweatpants with a drawstring waist and cuffed ankles",
-//     'sizes': ["XS", "S", "M", "L"],
-//     'fabric': "100% Cotton",
-//     'imageURL': "../productpics/Pants5.png"
-//   }
-];
+const loader = document.getElementById("loading");
+const output = document.querySelector("#output");
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modalContent");
+const closeModal = document.querySelector(".close");
+
+function displayLoading() {
+  loader.style.display = "block";
+}
+function hideLoading() {
+  loader.style.display = "none";
+}
+
+const url = "https://www.id.serialsnoozer.no/wp-json/wp/v2/posts";
+const api = "https://www.id.serialsnoozer.no/wp-json/wp/v2/posts/?_embed=wp:featuredmedia";
+
+displayLoading();
+
+fetch(api)
+  .then((res) => res.json())
+  .then((data) => {
+    hideLoading();
+    listPosts(data);
+  });
+  
+
+  function listPosts(posts) {
+    for (let post of posts) {
+      if (post.featured_media > 0) {
+        let img =
+          post._embedded["wp:featuredmedia"][0].media_details.sizes.medium
+            .source_url;
+        output.innerHTML += `
+          <div class="container">
+            <div class="imageContainer">
+              <img src="${img}" alt="picture of carrier ${post.title.rendered}" class="image">
+              <button class="buyNow"><a href="./checkout.html?id=${post.id}">Buy now <i class="fa-solid fa-baby-carriage fa-flip-horizontal"></i></a></button>
+            </div>
+            <div class="productInfo">
+              <div class="productTitle"> 
+                <h3 class="productName">${post.title.rendered}</h3>
+                <h3 class="carrier">Carrier</h3>
+              </div>
+              ${post.content.rendered}
+            </div>
+            <div>
+              <button class="details">View details</button>
+            </div>
+          </div>
+        `;
+      } else {
+        output.innerHTML += `<div>[Post id=${post.title.rendered} does not have an image]</div>`;
+      }
+    }
+
+    
+
+  const images = document.querySelectorAll(".imageContainer");
+  images.forEach((image) => {
+    const buyButton = image.querySelector(".buyNow");
+
+    image.addEventListener("mouseenter", () => {
+      buyButton.style.display = "block";
+    });
+
+    image.addEventListener("mouseleave", () => {
+      buyButton.style.display = "none";
+    });
+  });
+
+  const detailsButtons = document.querySelectorAll(".details");
+
+  detailsButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const post = posts[index];
+      openModal(post);
+    });
+  });
+
+  function openModal(post) {
+    const img = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+
+    
+    modalContent.innerHTML = `
+        <div class="cardModal">
+            <img src="${img}" alt="picture of carrier ${post.title.rendered}" class="imageModal">
+            <div class="infoModal">
+                <div class="productTitle">
+                    <h3 class="productName">${post.title.rendered}</h3>
+                    <h3 class="carrier">Carrier</h3>
+                </div>
+                ${post.excerpt.rendered}
+                <button class="buynowModal"><a href="./checkout.html?id=${post.id}">Buy now <i class="fa-solid fa-baby-carriage fa-flip-horizontal"></i></a></button>
+            </div>
+        </div>
+            <span class="close">&times;</span>
+    `;
+
+    modal.style.display = "block";
+    document.body.classList.add("overlay");
+  }
+
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("overlay");
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal || modal.contains(event.target)) {
+      modal.style.display = "none";
+      document.body.classList.remove("overlay");
+    }
+  });
+}
